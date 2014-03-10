@@ -3,6 +3,7 @@ Ayadu::Application.routes.draw do
 
 
 
+  devise_for :users
 root "pages#home"
 
   match ":controller(/:action(/:id))",
