@@ -18,6 +18,8 @@
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to('About', :action => 'about') %></li>
         <% if user_signed_in? %>
+        <li><%= link_to "Account Settings", edit_user_registration_path %></li>
+
         <li><%= link_to('Log out', {:controller => 'users', :action => 'sign_out'}, method: :delete)%></li>
         <% else %>
         <li><%= link_to('Sign in', {:controller => 'users', :action => 'sign_in'})%></li>
